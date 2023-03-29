@@ -8,8 +8,9 @@
 body{
   margin: 0;
   font-family: sans-serif;
-  /* background: url() no-repeat center fixed; */
-  /* background-size: cover; */
+  background: url(./assets/images/nasa.jpg) no-repeat center fixed;
+  /* background: url(./assets/images/lookingupSpace.jpg) no-repeat center fixed; */
+  background-size: cover;
   color: #fff;
   padding: 2em;
 }
@@ -84,6 +85,8 @@ position: relative;
 .checkpoint:nth-child(odd)::before,
 .checkpoint:nth-child(even)::before{
   content: "";
+    /* content: url("https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png"); */
+
   background-color: #888;
   width: 3em;
   height: 3px;
@@ -100,10 +103,9 @@ position: relative;
   right: 0;
 }
 
-.checkpoint:nth-child(even) div::before,
+/* .checkpoint:nth-child(even) div::before,
 .checkpoint:nth-child(odd) div::before{
   content:"";
-  /* content: url("https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png"); */
   background-color: #fff;
   box-shadow: 0 0 0.5em #0d71fc;
   width: 0.8em;
@@ -112,16 +114,36 @@ position: relative;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
+} */
+
+.checkpoint:nth-child(even) div img,
+.checkpoint:nth-child(odd) div img{
+  box-shadow: 0 0 0.5em #0d71fc;
+  width: 3em;
+  height: 3em;
+  padding: 0.5em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.checkpoint:nth-child(odd) div img{
+  left: -2em;
+}
+
+.checkpoint:nth-child(even) div img{
+  right: -2em;
 }
 
 
-.checkpoint:nth-child(odd) div::before{
+/* .checkpoint:nth-child(odd) div::before{
   left: -0.5em;
 }
 
 .checkpoint:nth-child(even) div::before{
   right: -0.5em;
-}
+} */
 
 @media screen and (max-width:1150px) {
   .timeline{

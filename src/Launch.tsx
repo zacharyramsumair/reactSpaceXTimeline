@@ -29,6 +29,7 @@ const Launch = (props: Props) => {
   return (
     <div className='checkpoint'>
         <div>
+          <img src={props.patch} alt="" />
         <h2>({props.id}) {props.missionName}</h2>
         <h3>{props.rocketName} ({props.rocketType})</h3>
         <small>{props.site} - {parsedDate}</small>

@@ -17,8 +17,6 @@ function App() {
 
   if (error) return "An error has occurred: " + error;
 
-  console.log(data[0])
-
 
   let checkpointElements = data.map((launch, index:number)=> {
     return <Launch key={index} id={launch.flight_number} year={launch.launch_year} 
@@ -29,9 +27,6 @@ function App() {
 
   return (
     <main className='app'>
-      {/* <div>{isFetching ? "Updating..." : ""}</div>
-      {data ?<div>{data[0]?.mission_name}</div> : ""} */}
-
       <h1 className='title'>SpaceX Launch Timeline</h1>
       <div className="timeline">
         {checkpointElements}
@@ -39,12 +34,6 @@ function App() {
     </main>
   );
 
-
-  // return (
-  //   <div className="App">
-  //    app
-  //   </div>
-  // )
 }
 
 export default App
